@@ -40,10 +40,10 @@ def history(account) :
 if __name__ == "__main__":
     accounts = get_accounts()
     for account in accounts :
-        print "계정 :", account
+        print "acc :", account
         history_list = history(account)
         if len(history_list) == 0:
-            print "\t기록된 이력 없음"
+            print "\tNothing use"
         for h in history_list :
             print "\t%s\t%s" % h
         print "-" * 70

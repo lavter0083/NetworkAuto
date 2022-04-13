@@ -19,15 +19,15 @@ def history_by_date(history_list, start_date, end_date) :
 
 if __name__ == "__main__":
     # 사용자에게 시간대를 입력받습니다.
-    print "어느 시간에 실행한 명령어를 조회하시겠습니까?"
-    input_date = raw_input("년-월-일 시각을 입력하세요(예, 2016-08-11 14) :")
+    print "What time do you want to see the command executed?"
+    input_date = raw_input("enter the year-day-time (ex, 2016-08-11 14) :")
     input_date = input_date + ":00:00"
     
     date = get_datetime(input_date)
     start_date = date - datetime.timedelta(hours=1)     # 입력 시각 1시간 전
     end_date = date + datetime.timedelta(hours=1)       # 입력 시각 1시간 후
 
-    print start_date, "~", end_date, "동안 입력된 명령어"
+    print start_date, "~", end_date, "enter command"
     print "-" * 70
 
     accounts = get_accounts()
@@ -43,7 +43,7 @@ if __name__ == "__main__":
             continue
 
         # 이력 정보가 확인되면 출력
-        print "계정 :", account
+        print "acc :", account
         for h in history_list :
             print "\t%s\t%s" % h
         print "-" * 70

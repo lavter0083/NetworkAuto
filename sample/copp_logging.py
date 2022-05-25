@@ -56,7 +56,7 @@ def write_syslog_policy() :
     syslog(2, log)
 
 if __name__ == "__main__":
-    check_term = 600    # 체크 시간은 초 단위로
+    check_term = 10    # 체크 시간은 초 단위로
     
     # 경과 시간을 문자열(x시 x분 x초)로 변경
     check_term_str = get_term_str(check_term)
